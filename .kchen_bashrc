@@ -16,14 +16,14 @@ export LANGUAGE=en_US.UTF-8
 # User specific aliases and functions
 export VSLICKBACKUP=~/.slickedit/backup 
 #PATH=$PATH:/opt/slickedit/bin:/opt/p4v/bin:/opt/montavista/bin:/home/kche/bin
-PATH=$PATH:/home/kchen/slickedit-pro2016/bin:/opt/p4v/bin:/opt/montavista/bin:/home/kchen/bin
+PATH=$PATH:/home/kchen/slickedit-pro2016/bin:/opt/p4v/bin:/opt/montavista/bin:/home/kchen/bin:/usr/local/bin
 export P4PORT=sonicscm:1666
 export P4USER=kchen
 export P4CLIENT=kchen_${HOSTNAME}
 #
 # for compile sonicwall linux
 #
-export CONCURRENCY_LEVEL=6
+export CONCURRENCY_LEVEL=10
 export EDITOR=vs
 
 export FCH230_SNWL_PATH=/home/kchen/work/Firmware/SuperMassive/OSP/snwl-oct-2.3.0
@@ -98,3 +98,4 @@ export GREP_OPT="-Hin"
 # export GREP_OPT="-Hin -A 10 -B 10"
 
 export GIT_KC="git@github.com:/karlcchen"
+
