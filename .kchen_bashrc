@@ -1,0 +1,100 @@
+# kchen_bashrc
+# tobe sourced from ~/.bashrc
+
+#
+# Note: servers "merlot" and "chablis" has short hostname without ".eng.sonicwall.com"
+#
+export HOSTNAME_BASE=`basename $HOSTNAME .eng.sonicwall.com`
+export HOSTNAME=`basename $HOSTNAME .eng.sonicwall.com`
+#export HOSTNAME=`hostname | cut -b -8`
+
+# locales 
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+
+# User specific aliases and functions
+export VSLICKBACKUP=~/.slickedit/backup 
+#PATH=$PATH:/opt/slickedit/bin:/opt/p4v/bin:/opt/montavista/bin:/home/kche/bin
+PATH=$PATH:/home/kchen/slickedit-pro2016/bin:/opt/p4v/bin:/opt/montavista/bin:/home/kchen/bin
+export P4PORT=sonicscm:1666
+export P4USER=kchen
+export P4CLIENT=kchen_${HOSTNAME}
+#
+# for compile sonicwall linux
+#
+export CONCURRENCY_LEVEL=6
+export EDITOR=vs
+
+export FCH230_SNWL_PATH=/home/kchen/work/Firmware/SuperMassive/OSP/snwl-oct-2.3.0
+export FCH230_U_BOOT_PATH=/home/kchen/work/Firmware/SuperMassive/SonicOS/WorkSet/bootloader-osp-2.3.0
+export FCH230_LINUX_PATH=/home/kchen/work/Firmware/SuperMassive/SonicOS/WorkSet/linux-osp-2.3.0
+
+export VL_COPY_KERNEL_CMD="scp"
+export VL_DO_COPY_KERNEL="no"
+#export VL_COPY_KERNEL_DEST="10.0.19.73:/tftpboot/kchen"
+#export VL_COPY_KERNEL_DEST=/tftpboot/kchen
+
+#
+# where script files are located, for daily cron job
+# use relative path
+# export MY_SCRIPT_HOME="./scripts/daily"
+# use ABS path
+export MY_SCRIPT_HOME="${HOME}/scripts/daily"
+export DAILY_HOSTNAME="kchen"
+
+# MontaVista License Server
+#
+#export LM_LICENSE_FILE=@ibznez:/opt/flexnet-mvista/bin/mvista.lic
+#export LM_LICENSE_FILE=@10.0.54.158:/opt/flexnet-mvista/bin/mvista.lic
+#export LM_LICENSE_FILE=@10.0.54.158
+export LM_LICENSE_FILE=/opt/flexnet-mvista/bin/mvista.lic
+
+# for screen reset
+#
+# basic command, for a 80x25
+alias sane='echo -e "\\033c";tput is2;stty sane line 1 rows 40 columns 120'
+# generic version, no size...
+# alias sane='echo -e "\\033c";tput is2;stty sane line 1'
+# my idea of a "standard size xterm"
+alias xsane='echo -e "\\033c";tput is2;stty sane line 1 rows 30 columns 100'
+
+# where script files are located, for daily cron job
+# use relative path
+# export MY_SCRIPT_HOME="./scripts/daily"
+# use ABS path
+export MY_SCRIPT_HOME="${HOME}/scripts/daily"
+export DAILY_HOSTNAME="${HOSTNAME_BASE}"
+
+#
+# fakeroot
+#export LD_PRELOAD=/usr/lib64/libfakeroot/libfakeroot-sysv.so
+
+export FTP_ISMO=ftp.ismo.sonicwall.com
+export FTP_DIR=Seano/SNWL/gen6/diag
+
+alias stresc='sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"'
+#alias stresc='sed "s,\x1B\[[0-9;]*[a-zA-Z],,g"'
+
+export MATSU="10.204.156.201"
+export GIBSON="10.204.212.200"
+export FENDER="10.204.212.199"
+export IBANEZ="10.204.212.198"
+
+export GBTFTP=${GIBSON}:/tftpboot/kchen
+export FDTFTP=${FENDER}:/tftpboot/kchen
+export IBTFTP=${IBZNEZ}:/tftpboot/kchen
+
+# set uboot ipaddr to 10.204.213.xx
+export BSP_LAB_TFTP_GW="10.204.154.202"
+export BSP_LAB_GW="10.204.212.1"
+
+#
+# extra options used in fgrep
+# for used in scripts files: fch, fmk, etc...
+#
+export GREP_OPT="-Hin"
+# display surrounding lines: After/Before 10 lines
+# export GREP_OPT="-Hin -A 10 -B 10"
+
+export GIT_KC="git@github.com:/karlcchen"
