@@ -16,7 +16,7 @@ export LANGUAGE=en_US.UTF-8
 # User specific aliases and functions
 export VSLICKBACKUP=~/.slickedit/backup 
 #PATH=$PATH:/opt/slickedit/bin:/opt/p4v/bin:/opt/montavista/bin:/home/kche/bin
-PATH=$PATH:/home/kchen/slickedit-pro2016/bin:/opt/p4v/bin:/opt/montavista/bin:/home/kchen/bin:/usr/local/bin:/usr/local/bin/julia
+PATH=$PATH:/home/kchen/slickedit-pro2016/bin:/opt/p4v/bin:/opt/montavista/bin:/home/kchen/bin:/usr/local/bin:/usr/local/bin/julia/bin
 export P4PORT=sonicscm:1666
 export P4USER=kchen
 export P4CLIENT=kchen_${HOSTNAME}
