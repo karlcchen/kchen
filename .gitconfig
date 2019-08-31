@@ -1,0 +1,14 @@
+[core]
+        editor = vim
+	filemode = true
+[user]
+	email = kchen@sonicwall.com
+	name = Karl Chen
+[rebase]
+	pull = true
+[status]
+	showUntrackedFiles = no
+[color]
+	ui = auto
+[http]
+	sslverify = false
