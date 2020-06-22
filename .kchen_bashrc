@@ -94,6 +94,7 @@ export BSP_LAB_GW="10.204.212.1"
 # for used in scripts files: fch, fmk, etc...
 #
 export GREP_OPT="-Hin"
+export FIND_OPT="-print0"
 # display surrounding lines: After/Before 10 lines
 # export GREP_OPT="-Hin -A 10 -B 10"
 
