@@ -93,8 +93,16 @@ export BSP_LAB_GW="10.204.212.1"
 # extra options used in fgrep
 # for used in scripts files: fch, fmk, etc...
 #
+# -i, --ignore-case         ignore case distinctions
+# -H, --with-filename       print file name with output lines
+# -n, --line-number         print line number with output lines
+#
+# export GREP_OPT="-Hn"
 export GREP_OPT="-Hin"
-export FIND_OPT="-print0"
+
+#
+export FIND_OPT=""
+
 # display surrounding lines: After/Before 10 lines
 # export GREP_OPT="-Hin -A 10 -B 10"
 
