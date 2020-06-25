@@ -96,7 +96,11 @@ export BSP_LAB_GW="10.204.212.1"
 # -i, --ignore-case         ignore case distinctions
 # -H, --with-filename       print file name with output lines
 # -n, --line-number         print line number with output lines
+# -w, --word-regexp         force PATTERN to match only whole words
+# -h, --no-filename         suppress the file name prefix on output
+# -v, --invert-match        select non-matching lines
 #
+#  -C, --context=NUM         print NUM lines of output context
 # export GREP_OPT="-Hn"
 export GREP_OPT="-Hin"
 
