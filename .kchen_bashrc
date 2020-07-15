@@ -102,7 +102,7 @@ export BSP_LAB_GW="10.204.212.1"
 #
 #  -C, --context=NUM         print NUM lines of output context
 # export GREP_OPT="-Hn"
-export GREP_OPT="-Hin"
+export GREP_OPT="-Hin --color=auto"
 
 #
 export FIND_OPT=""
