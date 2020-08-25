@@ -104,6 +104,9 @@ export BSP_LAB_GW="10.204.212.1"
 # export GREP_OPT="-Hn"
 export GREP_OPT="-Hin --color=auto"
 
+# grep: warning: GREP_OPTIONS is deprecated; please use an alias or script`?
+# export GREP_OPTIONS="${GREP_OPT}"
+
 #
 export FIND_OPT=""
 
