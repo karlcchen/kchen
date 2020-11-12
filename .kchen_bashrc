@@ -115,3 +115,8 @@ export FIND_OPT=""
 
 export GIT_KC="git@github.com:/karlcchen"
 
+# do not save "sudo -S" in history 
+export HISTIGNORE='*sudo -S*'
+export SUDO_PASSWD=""
+# then pass password in command line 
+# echo "your_password" | sudo -S -k <command>
