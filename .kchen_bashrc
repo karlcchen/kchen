@@ -81,6 +81,16 @@ export GIBSON="10.204.212.200"
 export FENDER="10.204.212.199"
 export IBANEZ="10.204.212.198"
 
+#
+# BSP LAB console server IP
+# telent port starting with 20xx
+# example: 
+#
+# $> telnet TERMRACK 2044
+# $> telnet termrack 2044
+#
+export TERMRACK="10.204.212.253"
+
 export GBTFTP=${GIBSON}:/tftpboot/kchen
 export FDTFTP=${FENDER}:/tftpboot/kchen
 export IBTFTP=${IBZNEZ}:/tftpboot/kchen
