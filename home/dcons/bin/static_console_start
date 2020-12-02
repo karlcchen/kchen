@@ -2,18 +2,17 @@
 #
 # static_console_start
 #
-sudo chmod a+rw /dev/ttyUSB*
-sudo chmod 755 /run/screen
-sudo rm -fr /var/run/screen/*
+sudo chmod 777 /run/screen
+# sudo rm -fr /var/run/screen/*
 
 cd /home/dcons
 if [ $? -ne 0 ] ; then 
-    printf 'ERROR-1: cd /home/dcons failed!\n' 
+    printf '\nERROR-1: cd /home/dcons failed!\n' 
     exit 1    
 fi
 
 screen -c /etc/screenrc.d/debug_console -d -m -S dcons
 if [ $? -ne 0 ] ; then
-    printf 'ERROR-02: screen failed!\n'
+    printf '\nERROR-02: screen failed!\n'
     exit 2
 fi 
