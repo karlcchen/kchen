@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# dynamic_console_start
+#
+sudo chmod a+rw /dev/ttyUSB*
+sudo chmod 755 /run/screen
+sudo rm -fr /var/run/screen/*
+
+cd /home/dcons
+if [ $? -ne 0 ]; then 
+    printf 'ERROR-1: cd /home/dcons failed!\n' 
+    exit 1    
+fi
+
+screen -c /etc/screenrc.d/debug_dynamic -d -m -S dcons
+if [ $? -ne 0 ] ; then
+    printf 'ERROR-02: screen failed!\n'
+    exit 2
+fi 
