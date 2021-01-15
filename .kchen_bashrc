@@ -21,6 +21,10 @@ export P4PORT=sonicscm:1666
 export P4USER=kchen
 export P4CLIENT=kchen_${HOSTNAME}
 #
+# run "p4 client" to setup client configuration  
+#
+
+#
 # for compile sonicwall linux
 #
 export CONCURRENCY_LEVEL=10
